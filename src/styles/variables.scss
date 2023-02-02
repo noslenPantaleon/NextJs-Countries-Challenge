@@ -1,0 +1,32 @@
+
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+
+:root {
+  // TEXTS
+
+  // FONTS
+  --title-primary-font: "Nunito", sans-serif;
+  --text--primary-font: "Nunito", sans-serif;
+}
+
+
+
+[data-theme="dark"] {
+  --background: black;
+  --card-background: rgb(50, 49, 49);
+  --color-text-primary: white;
+  --color-text-secondary: rgb(93, 92, 92);
+
+}
+
+
+[data-theme='light'] {
+  --color-text-primary: rgb(0, 0, 0);
+  --color-text-secondary: rgba(123, 123, 123, 1);
+  --card-background: #f6fafd;
+  --primary-50: #e0f7fa;
+  --background: #faf7fe;
+
+}
+

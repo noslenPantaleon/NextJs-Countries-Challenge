@@ -1,0 +1,74 @@
+.cardContainer {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 5rem;
+  row-gap: 5rem;
+
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.cardCountries {
+  margin-top: 20px;
+  font-size: 14px;
+  width: 265px;
+  height: 320px;
+  font-family: var(--text--primary-font);
+  background-color: var( --card-background);
+  color: var(--color-text-secondary);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  gap: 20px;
+  text-decoration:none;
+
+  h1 {
+    font-size: 16;
+    padding-bottom: 10px;
+    color: var(--color-text-primary);
+    font-weight: 800;
+    
+  }
+
+  span {
+    display: flex;
+    gap: 10px;
+  }
+  b {
+    font-weight: 800;
+    color: var(--color-text-primary);
+    font-size: 16;
+  }
+  
+}
+
+.flagImage {
+  height: 150px;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+
+  object-fit: fill;
+}
+
+.cardImage {
+  width: 100%;
+  object-fit: fill;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  gap:5px;
+  height: auto;
+  align-items: flex-start;
+  margin-left: 20px;
+  text-decoration:none;
+  padding-top: 10px;
+
+}
+
+
