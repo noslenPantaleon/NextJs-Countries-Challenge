@@ -1,14 +1,31 @@
+@import '../../styles/mixings.scss';
+
 .cardContainer {
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   column-gap: 5rem;
   row-gap: 5rem;
 
-
   a {
     text-decoration: none;
+  }
+
+  @include extra-small {
+    flex-direction: column;
+    width: 480px;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @include small-down {
+    flex-direction: column;
+    width: 330px;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
   }
 }
 
@@ -18,19 +35,19 @@
   width: 265px;
   height: 320px;
   font-family: var(--text--primary-font);
-  background-color: var( --card-background);
+  background-color: var(--card-background);
   color: var(--color-text-secondary);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   gap: 20px;
-  text-decoration:none;
+  text-decoration: none;
 
   h1 {
     font-size: 16;
     padding-bottom: 10px;
+    padding-top: 10px;
     color: var(--color-text-primary);
     font-weight: 800;
-    
   }
 
   span {
@@ -42,14 +59,26 @@
     color: var(--color-text-primary);
     font-size: 16;
   }
-  
+
+  @include extra-small {
+    width: 300px;
+    height: 350px;
+    margin-left: 5px;
+    gap: 10px;
+  }
+
+  @include small-down {
+    width: 300px;
+    height: 350px;
+    margin-left: 5px;
+    gap: 10px;
+  }
 }
 
 .flagImage {
   height: 150px;
   width: 100%;
   border-radius: 10px 10px 0px 0px;
-
   object-fit: fill;
 }
 
@@ -60,15 +89,11 @@
 
 .textContainer {
   display: flex;
-  flex-direction: row;
   width: 250px;
-  gap:5px;
+  gap: 5px;
   height: auto;
   align-items: flex-start;
   margin-left: 20px;
-  text-decoration:none;
+  text-decoration: none;
   padding-top: 10px;
-
 }
-
-

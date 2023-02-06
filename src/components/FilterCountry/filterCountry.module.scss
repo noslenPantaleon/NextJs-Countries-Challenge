@@ -1,7 +1,14 @@
+@import '../../styles/../styles/mixings.scss';
 
 .container {
-  
-    height: 30px;
-    width: 10%;
+  height: 30px;
+  width: 10%;
 
+  @include extra-small {
+    width: 45%;
   }
+
+  @include small-down {
+    width: 45%;
+  }
+}

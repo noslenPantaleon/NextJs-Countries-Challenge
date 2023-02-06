@@ -1,14 +1,14 @@
-import styles from "./countriesDetail.module.scss";
-import Link from "next/link";
-import { IoMdArrowBack } from "react-icons/io";
+import styles from './countriesDetail.module.scss';
+import Link from 'next/link';
+import { IoMdArrowBack } from 'react-icons/io';
 
 const CountriesDetailCard = ({ country }) => {
   return (
     <>
       <section className={styles.container}>
         <div>
-          <Link href="/">
-            <button className={styles.button}>Back</button>
+          <Link href='/'>
+            <button>Back</button>
           </Link>
         </div>
 
@@ -75,7 +75,7 @@ const CountriesDetailCard = ({ country }) => {
                   <b> Currency:</b>
                 </h3>
 
-                <h3>{country[0]?.currencies.name }</h3>
+                <h3>{country[0]?.currencies.name}</h3>
               </span>
               <span>
                 <h3>
