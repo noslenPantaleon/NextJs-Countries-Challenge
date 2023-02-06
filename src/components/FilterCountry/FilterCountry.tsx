@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./filterCountry.module.scss";
-
+import React from 'react';
+import styles from './filterCountry.module.scss';
 
 const FilterCountry = ({ onSelect }) => {
   const selectHandler = (e) => {
@@ -10,20 +9,20 @@ const FilterCountry = ({ onSelect }) => {
 
   return (
     <select className={styles.container} onChange={selectHandler}>
-      <option className="option">Filter by Region</option>
-      <option className="option" value="Africa">
+      <option className='option'>Filter by Region</option>
+      <option className='option' value='Africa'>
         Africa
       </option>
-      <option className="option" value="America">
+      <option className='option' value='America'>
         America
       </option>
-      <option className="option" value="Asia">
+      <option className='option' value='Asia'>
         Asia
       </option>
-      <option className="option" value="Europe">
+      <option className='option' value='Europe'>
         Europe
       </option>
-      <option className="option" value="Oceania">
+      <option className='option' value='Oceania'>
         Oceania
       </option>
     </select>

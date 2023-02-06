@@ -1,9 +1,10 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 /* Box sizing rules */
 *,
@@ -39,7 +40,7 @@ dd {
 html {
   width: 100vw;
   overflow-x: hidden;
-  font-family: var( --title-primary-font);
+  font-family: var(--title-primary-font);
 }
 
 /* Set core body defaults */
@@ -92,6 +93,3 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
-
-

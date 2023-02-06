@@ -1,21 +1,24 @@
-
+@import '../../styles/mixings.scss';
 
 .container {
-
-  input{
+  input {
     height: 30px;
     width: 200px;
+
+    @include extra-small {
+      width: 330px;
+    }
+
+    @include small-down {
+      width: 330px;
+    }
   }
-
-
 }
 
-.icon{
-  position: absolute;
+.icon {
   display: flex;
   gap: 8px;
   justify-content: center;
   align-items: center;
   left: 90px;
-  
 }

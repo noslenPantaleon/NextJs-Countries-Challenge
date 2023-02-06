@@ -1,12 +1,21 @@
-.searchBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 8rem;
-    padding-bottom: 3rem;
+@import './mixings.scss';
 
-   
-   }
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
 
+  @include extra-small {
+    flex-direction: column;
+    gap: 25px;
+    width: 300px;
+  }
 
- 
+  @include small-down {
+    flex-direction: column;
+    gap: 25px;
+    width: 300px;
+  }
+}
