@@ -21,7 +21,7 @@ const countriesCard = ({ countries }) => {
                     <h4>
                       <b>Population:</b>
                     </h4>
-                    <h4>{country.population}</h4>
+                    <h4>{country.population.toLocaleString()}</h4>
                   </div>
                   <div className={styles.textContainer}>
                     <h4>
