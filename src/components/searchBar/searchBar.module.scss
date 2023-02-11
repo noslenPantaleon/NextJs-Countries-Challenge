@@ -1,9 +1,11 @@
 @import '../../styles/mixings.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .container {
   input {
     height: 30px;
     width: 200px;
+    text-align: center;
 
     @include extra-small {
       width: 330px;
@@ -12,13 +14,52 @@
     @include small-down {
       width: 330px;
     }
+
+    ::placeholder {
+      animation: hideshow;
+      opacity: 1;
+    }
   }
 }
 
 .icon {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-  left: 90px;
+  position: absolute;
+  left: 130px;
+  top: 135px;
+  animation-name: hideshow;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+.animateIcon {
+  position: absolute;
+  left: 130px;
+  top: 135px;
+  animation-name: traslate;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+@keyframes traslate {
+  0% {
+    transform: translate(-5px);
+  }
+
+  100% {
+    transform: translate(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes hideshow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

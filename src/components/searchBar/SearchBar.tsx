@@ -4,33 +4,37 @@ import { AiOutlineSearch } from 'react-icons/Ai';
 
 const Search = ({ handleChangeName }) => {
   const [input, setInput] = useState('');
-  const [focus, setFocusValue] = useState(true);
+  const [focus, setFocusValue] = useState(false);
 
   const submitHandler = (value: string) => {
+    value ? setFocusValue(true) : setFocusValue(false);
     setInput(value);
     setTimeout(() => {
       handleChangeName(value);
     }, 1000);
   };
 
-  const handleFocus = (event) => {
+  const handleBlur = (event) => {
     event.preventDefault();
-    const focusValue = event.target.value;
-    console.log('Should be focus value', focusValue);
-    setFocusValue(focusValue);
+    setFocusValue(false);
   };
 
   return (
     <>
       <section>
         <form className={styles.container}>
-          <AiOutlineSearch size={20} />
+          {focus ? (
+            <AiOutlineSearch className={styles.animateIcon} />
+          ) : (
+            <AiOutlineSearch className={styles.icon} />
+          )}
+
           <input
             type='text'
             value={input}
             onChange={(e) => submitHandler(e.target.value)}
-            onFocus={handleFocus}
-            placeholder='Search for a country...'
+            onBlur={handleBlur}
+            placeholder=' Search for a country...'
           />
         </form>
       </section>

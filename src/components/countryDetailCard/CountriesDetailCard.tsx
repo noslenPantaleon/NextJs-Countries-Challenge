@@ -1,6 +1,7 @@
 import styles from './countriesDetail.module.scss';
 import Link from 'next/link';
 import { IoMdArrowBack } from 'react-icons/io';
+import BaseButton from '../BaseButton/BaseButton';
 
 const CountriesDetailCard = ({ country }) => {
   return (
@@ -8,7 +9,11 @@ const CountriesDetailCard = ({ country }) => {
       <section className={styles.container}>
         <div>
           <Link href='/'>
-            <button>Back</button>
+            <BaseButton
+              text='Back'
+              mainButton
+              icon={<IoMdArrowBack size={20} />}
+            />
           </Link>
         </div>
 
@@ -34,7 +39,7 @@ const CountriesDetailCard = ({ country }) => {
                 <h3>
                   <b>Population:</b>
                 </h3>
-                <h3>{country[0]?.population}</h3>
+                <h3>{country[0]?.population.toLocaleString()}</h3>
               </span>
 
               <span>
