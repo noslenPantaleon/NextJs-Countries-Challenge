@@ -1,41 +1,26 @@
 import styles from './countries.module.scss';
 import Link from 'next/link';
+import DetailCard from './DetailCard';
 
 const countriesCard = ({ countries }) => {
   return (
     <>
       <section className={styles.cardContainer}>
-        {countries?.map((country: any) => {
+        {countries?.map((country: any, index: any) => {
           return (
-            <Link href={`/countries/${country.name.common}`}>
-              <section key={country.id} className={styles.cardCountries}>
+            <Link key={index} href={`/countries/${country.name.common}`}>
+              <section className={styles.cardCountries}>
                 <div className={styles.cardImage}>
                   <img className={styles.flagImage} src={country?.flags?.png} />
                 </div>
-                <div className={styles.textContainer}>
-                  <h1>{country.name.common} </h1>
+                <div className={styles.cardInfo}>
+                  <DetailCard
+                    name={country.name.common}
+                    population={country.population.toLocaleString()}
+                    region={country.region}
+                    capital={country.capital}
+                  />
                 </div>
-
-                <section>
-                  <div className={styles.textContainer}>
-                    <h4>
-                      <b>Population:</b>
-                    </h4>
-                    <h4>{country.population.toLocaleString()}</h4>
-                  </div>
-                  <div className={styles.textContainer}>
-                    <h4>
-                      <b>Region:</b>
-                    </h4>
-                    <h4>{country.region}</h4>
-                  </div>
-                  <div className={styles.textContainer}>
-                    <h4>
-                      <b>Capital:</b>
-                    </h4>
-                    <h4>{country.capital}</h4>
-                  </div>
-                </section>
               </section>
             </Link>
           );

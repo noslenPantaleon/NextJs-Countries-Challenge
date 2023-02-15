@@ -1,8 +1,10 @@
 @import '../../styles/../styles/mixings.scss';
 
 .container {
-  height: 30px;
+  height: 40px;
   width: 10%;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
 
   @include extra-small {
     width: 45%;

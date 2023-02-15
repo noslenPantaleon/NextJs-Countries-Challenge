@@ -24,9 +24,9 @@ const Search = ({ handleChangeName }) => {
       <section>
         <form className={styles.container}>
           {focus ? (
-            <AiOutlineSearch className={styles.animateIcon} />
+            <AiOutlineSearch size={20} className={styles.animateIcon} />
           ) : (
-            <AiOutlineSearch className={styles.icon} />
+            <AiOutlineSearch size={20} className={styles.icon} />
           )}
 
           <input
