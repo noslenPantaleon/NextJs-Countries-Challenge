@@ -1,11 +1,10 @@
-@import url('https://fonts.google.com/specimen/Nunito+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
   // TEXTS
 
   // FONTS
   --title-primary-font: 'Nunito', sans-serif;
-  --text--primary-font: 'Nunito', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -15,14 +14,18 @@
   --color-text-secondary: rgb(210, 208, 208);
   --color-text-third: rgb(201, 198, 198);
   --color-button: rgb(255, 255, 255);
-  --color-button-hover: rgb(122, 111, 111);
+  --color-button-background: rgb(33, 32, 32);
+  --color-button-border: rgb(21, 20, 20);
+  --color-borders-background: rgb(24, 23, 23);
 }
 
 [data-theme='light'] {
   --color-text-primary: rgb(0, 0, 0);
   --color-text-secondary: rgba(123, 123, 123, 1);
   --color-button: rgb(21, 20, 20);
+  --color-button-border: rgb(21, 20, 20);
   --card-background: #f6fafd;
   --background: #faf7fe;
-  --color-button-hover: rgb(122, 111, 111);
+  --color-button-background: none;
+  --color-borders-background: rgb(243, 236, 236);
 }

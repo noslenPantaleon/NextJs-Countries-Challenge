@@ -1,46 +1,101 @@
-import { FC } from "react";
-import styles from "./countriesDetail.module.scss";
+import { FC } from 'react';
+import styles from './detail.module.scss';
 
 interface Props {
   name: string;
+  nativeName: string;
   population: number;
-  flag: string;
+  region: string;
   subRegion: string;
   capital: string;
   toplevelDomain: string;
   currency: string;
   languages: Array<string>;
+  borderText: string;
+  bordersCountries: string;
 }
 
 const Detail: FC<Props> = ({
   name,
   population,
-  flag,
+  region,
   subRegion,
   capital,
   toplevelDomain,
   currency,
   languages,
+  nativeName,
+  borderText,
+  bordersCountries,
 }) => {
   return (
-    <div className={styles.container}>
-      <button>Back</button>
-
-      <div>
-        <img className={styles.flagImage} src={flag} />
+    <>
+      <div className={styles.title}>
+        <h1>{name}</h1>
       </div>
 
-      <div>
-        <h2>{name}</h2>
-        <h3>{population}</h3>
-        <h3>{flag}</h3>
-        <h3>{subRegion}</h3>
-        <h3>{capital}</h3>
-        <h3>{toplevelDomain}</h3>
-        <h3>{currency}</h3>
-        <h3>{languages}</h3>
+      <div className={styles.info}>
+        <div>
+          <span>
+            <h3>
+              <b>Native Name:</b>
+            </h3>
+            <h4>{nativeName}</h4>
+          </span>
+          <span>
+            <h3>
+              <b>Population:</b>
+            </h3>
+            <h4>{population}</h4>
+          </span>
+
+          <span>
+            <h3>
+              <b>Region:</b>
+            </h3>
+            <h4>{region}</h4>
+          </span>
+          <span>
+            <h3>
+              <b>SubRegion:</b>
+            </h3>
+            <h4>{subRegion}</h4>
+          </span>
+          <span>
+            <h3>
+              <b>Capital:</b>
+            </h3>
+            <h4>{capital}</h4>
+          </span>
+        </div>
+        <div>
+          <span>
+            <h3>
+              <b>Top Level Domain:</b>
+            </h3>
+            <h4>{toplevelDomain}</h4>
+          </span>
+          <span>
+            <h3>
+              <b> Currency:</b>
+            </h3>
+            <h4>{currency}</h4>
+          </span>
+          <span>
+            <h3>
+              <b>Languages:</b>
+            </h3>
+            <h4>{languages}</h4>
+          </span>
+        </div>
       </div>
-    </div>
+      <div className={styles.containerBorders}>
+        <h3>
+          <b>{borderText}</b>
+        </h3>
+        <h3 className={styles.border}>{bordersCountries}</h3>
+      </div>
+    </>
   );
 };
 

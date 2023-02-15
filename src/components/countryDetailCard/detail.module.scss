@@ -1,0 +1,64 @@
+@import '../../styles/mixings.scss';
+
+.info {
+  display: flex;
+  gap: 2rem;
+  font-family: var(--title-primary-font);
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  font-size: 16;
+  text-decoration: none;
+  h1 {
+    font-size: 20;
+    padding-bottom: 20px;
+  }
+
+  span {
+    display: flex;
+    gap: 10px;
+    font-weight: lighter;
+  }
+  b {
+    font-weight: 800;
+    color: var(--color-text-primary);
+    font-size: 16;
+  }
+
+  @include extra-small {
+    flex-direction: column;
+    font-size: 14;
+  }
+  @include small-down {
+    flex-direction: column;
+    font-size: 14;
+  }
+}
+
+.title {
+  font-size: 24px;
+  padding-bottom: 20px;
+  @include extra-small {
+    font-size: 18px;
+  }
+  @include small-down {
+    font-size: 18px;
+  }
+}
+
+.containerBorders {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  @include small-down {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.border {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
