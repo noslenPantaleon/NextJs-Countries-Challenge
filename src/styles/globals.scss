@@ -59,6 +59,11 @@ ol[class] {
   list-style: none;
 }
 
+Link,
+a {
+  text-decoration: none;
+}
+
 /* A elements that don't have a class get default styles 
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -81,8 +86,8 @@ button,
 textarea,
 select {
   font: inherit;
-}*/
-
+}
+*/
 /* Remove all animations and transitions for people that prefer not to see them */
 
 @media (prefers-reduced-motion: reduce) {

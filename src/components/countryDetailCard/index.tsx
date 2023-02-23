@@ -1,2 +1,2 @@
-import Detail from "./Detail";
-export default Detail;
+import CountryDetailCard from './CountryDetailCard';
+export default CountryDetailCard;
