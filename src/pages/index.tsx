@@ -7,9 +7,11 @@ import { useState, useEffect } from 'react';
 import SearchBar from '../components/searchBar';
 import FilterCountry from '../components/FilterCountry/FilterCountry';
 import styles from '../styles/home.module.scss';
+import Pagination from '../components/pagination/Pagination';
 
 const Home: NextPage = () => {
   const [countries, setCountries]: any = useState([]);
+  const [page, setPage] = useState(1);
 
   const getCountriesApi = async () => {
     const countries = await getCountries();
@@ -41,6 +43,10 @@ const Home: NextPage = () => {
     }, 1000);
   };
 
+  const handleChangePage = (page: number) => {
+    setPage(page);
+  };
+
   useEffect(() => {
     getCountriesApi();
   }, []);
@@ -52,8 +58,16 @@ const Home: NextPage = () => {
         <FilterCountry onSelect={handlegetCountryByRegion} />
       </div>
       <div>
-        {countries.length !== 0 && <CountriesCard countries={countries} />}
+        {countries.length !== 0 && (
+          <CountriesCard countries={countries} pages={page} />
+        )}
         {countries.length === 0 && <div>Not found</div>}
+        <Pagination
+          page={page}
+          limitOfItems={12}
+          totalItems={countries?.length || 0}
+          handleChangePage={handleChangePage}
+        />
       </div>
     </main>
   );

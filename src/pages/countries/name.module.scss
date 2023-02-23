@@ -48,22 +48,6 @@
   }
 }
 
-.flagImage {
-  width: 600px;
-  height: 350px;
-
-  @include extra-small {
-    width: 300px;
-    margin-left: -12px;
-    height: auto;
-  }
-  @include small-down {
-    width: 300px;
-    height: auto;
-    margin-left: -12px;
-  }
-}
-
 .borders {
   display: flex;
   align-items: center;
@@ -71,4 +55,10 @@
   background-color: var(--color-borders-background);
   width: 100px;
   border-radius: 5px;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: var(--color-borders-hover-background);
+  }
 }

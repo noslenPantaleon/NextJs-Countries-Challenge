@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;600;800&display=swap');
 
 :root {
   // TEXTS
@@ -17,6 +17,7 @@
   --color-button-background: rgb(33, 32, 32);
   --color-button-border: rgb(21, 20, 20);
   --color-borders-background: rgb(24, 23, 23);
+  --color-borders-hover-background: rgb(89, 87, 87);
 }
 
 [data-theme='light'] {
@@ -28,4 +29,5 @@
   --background: #faf7fe;
   --color-button-background: none;
   --color-borders-background: rgb(243, 236, 236);
+  --color-borders-hover-background: rgb(173, 173, 173);
 }

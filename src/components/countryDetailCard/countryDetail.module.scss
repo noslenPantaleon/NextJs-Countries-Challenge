@@ -1,0 +1,121 @@
+@import '../../styles/mixings.scss';
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1257px;
+  height: 400px;
+  grid-gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+
+  h1 {
+    font-size: 20;
+    padding-bottom: 30px;
+  }
+
+  @include extra-small {
+    grid-template-columns: 1fr;
+    align-items: left;
+    width: 300px;
+  }
+  @include small-down {
+    grid-template-columns: 1fr;
+    align-items: left;
+  }
+
+  b {
+    font-weight: 800;
+    color: var(--color-text-primary);
+    font-size: 18;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 4rem;
+  font-family: var(--title-primary-font);
+  color: var(--color-text-secondary);
+  font-size: 16;
+  text-decoration: none;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 300;
+  }
+  b {
+    font-weight: 800;
+    color: var(--color-text-primary);
+    font-size: 16;
+  }
+
+  @include extra-small {
+    flex-direction: column;
+    font-size: 14;
+    gap: 2rem;
+  }
+  @include small-down {
+    flex-direction: column;
+    font-size: 14;
+    gap: 2rem;
+  }
+}
+
+.title {
+  font-size: 24px;
+  padding-bottom: 20px;
+
+  @include extra-small {
+    font-size: 18px;
+  }
+  @include small-down {
+    font-size: 18px;
+  }
+}
+
+.containerBorders {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+  @include small-down {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+.border {
+  display: flex;
+  flex-wrap: wrap;
+
+  text-decoration: none;
+  gap: 1rem;
+  a {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+  }
+}
+
+.flagImage {
+  width: 600px;
+  height: 350px;
+
+  @include extra-small {
+    width: 300px;
+    height: auto;
+  }
+  @include small-down {
+    width: 300px;
+    height: auto;
+  }
+}
