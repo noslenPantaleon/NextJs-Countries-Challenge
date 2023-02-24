@@ -1,6 +1,6 @@
 import styles from './searchBar.module.scss';
 import { useState } from 'react';
-import { AiOutlineSearch } from 'react-icons/Ai';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const Search = ({ handleChangeName }) => {
   const [input, setInput] = useState('');
