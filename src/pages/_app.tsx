@@ -2,8 +2,7 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import Navbar from '../components/navbar/Navbar';
-
-import Layout from '../components/layout';
+import Layout from '../components/layout/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
