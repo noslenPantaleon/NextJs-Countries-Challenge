@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import c from 'classnames';
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/Ai';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 import styles from './Pagination.module.scss';
 
