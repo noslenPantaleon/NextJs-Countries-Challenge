@@ -26,6 +26,15 @@ Users should be able to:
 ### Screenshot
 
 ![diagram website](/design/diagram.png 'diagram')
+<br> <br/>
+![capture1](/design/countryChallenges1.png 'capture1')
+<br> <br/>
+![capture2](/design/countryChallenges2.png 'capture2')
+<br> <br/>
+![capture3](/design/countryChallenges3.png 'capture3')
+<br> <br/>
+![capture4 ](/design/countryChallenges4.png 'capture4')
+<br> <br/>
 
 ### Links
 
