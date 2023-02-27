@@ -13,21 +13,35 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode _(optional)_
 
+### Installation
+
+## existing Project
+
+- touch tsconfig.json
+
+- Please install TypeScript, @types/react, and @types/node by running:
+
+- yarn add --dev typescript @types/react @types/node
+
 ### Screenshot
+
+![diagram website](/design/diagram.png 'diagram')
 
 ### Links
 
+- [link to website ](https://next-js-countries-challenge.vercel.app/)
+
 ## My process
 
-1- create a prototype object from the api response to learn more about the data.
-2- create main components and html and css structure
-3- fecht api data
-4- fix scss and components
-5- add theme switcher
-6- add responsive design scss
-6- add animations
-7- Fix all details and error messages
-8- Prepare for production and deployment
+- create a prototype object from the api response to learn more about the data.
+- create main components and html and css structure
+- fecht api data
+- fix scss and components
+- add theme switcher
+- add responsive design scss
+- add animations
+- Fix all details and error messages
+- Prepare for production and deployment
 
 ### Built with
 
