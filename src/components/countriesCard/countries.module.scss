@@ -2,6 +2,7 @@
 
 .cardContainer {
   display: flex;
+  height: auto;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -27,6 +28,18 @@
     align-items: center;
     flex-wrap: nowrap;
     gap: 2rem;
+  }
+
+  @mixin medium-up {
+    @media (min-width: #{$medium-width}) {
+      @content;
+    }
+  }
+
+  @mixin large {
+    @media (min-width: #{$large-width}) {
+      @content;
+    }
   }
 }
 

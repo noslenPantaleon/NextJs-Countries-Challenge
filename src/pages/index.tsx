@@ -8,14 +8,19 @@ import SearchBar from '../components/searchBar';
 import FilterCountry from '../components/FilterCountry/FilterCountry';
 import styles from '../styles/home.module.scss';
 import Pagination from '../components/pagination/Pagination';
+import Loading from '../components/Loading';
 
 const Home: NextPage = () => {
   const [countries, setCountries]: any = useState([]);
   const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getCountriesApi = async () => {
+    setIsLoading(true);
+    console.log('isLoading:', isLoading);
     const countries = await getCountries();
     setCountries(countries);
+    setIsLoading(false);
   };
 
   const handlegetCountryByRegion = (region: any) => {
@@ -58,13 +63,18 @@ const Home: NextPage = () => {
         <FilterCountry onSelect={handlegetCountryByRegion} />
       </div>
       <div>
-        {countries.length !== 0 && (
-          <CountriesCard countries={countries} pages={page} />
+        {isLoading ? (
+          <Loading />
+        ) : (
+          countries.length !== 0 && (
+            <CountriesCard countries={countries} pages={page} />
+          )
         )}
-        {countries.length === 0 && <div>Not found</div>}
+        {/* {countries.length === 0 && <div>Not found</div>} */}
+
         <Pagination
           page={page}
-          limitOfItems={12}
+          limitOfItems={20}
           totalItems={countries?.length || 0}
           handleChangePage={handleChangePage}
         />
