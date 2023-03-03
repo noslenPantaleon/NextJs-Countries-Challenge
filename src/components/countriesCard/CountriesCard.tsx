@@ -5,7 +5,7 @@ import { paginate } from '../../utils/paginate';
 import { motion } from 'framer-motion';
 
 const countriesCard = ({ countries, pages }) => {
-  const pageSize = 12;
+  const pageSize = 20;
   const paginatedPosts = paginate(countries, pages, pageSize);
 
   const variants = {
